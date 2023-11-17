@@ -82,4 +82,3 @@ Public Sub Update(ByVal value As Long, _
     Application.StatusBar = display
     
 End Sub
-
