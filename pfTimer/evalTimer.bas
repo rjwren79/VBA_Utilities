@@ -1,7 +1,7 @@
 Attribute VB_Name = "evalTimer"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\Modules
-'@Folder("vba-files\Modules")
+'namespace=vba-files\pfTimer
+'@Folder("vba-files\pfTimer")
 Option Explicit
 Option Private Module
 

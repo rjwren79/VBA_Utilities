@@ -1,7 +1,7 @@
-Attribute VB_Name = "MacroTest"
+Attribute VB_Name = "xlMacroTest"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\Utilities\Jarvis
-'@Folder("vba-files\Utilities\Jarvis")
+'namespace=vba-files\xlMacroTest
+'@Folder("vba-files\xlMacroTest")
 Option Explicit
 'Option Private Module
 

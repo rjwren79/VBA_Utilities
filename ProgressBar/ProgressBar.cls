@@ -8,8 +8,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 ' Add namespace for XVBA file structure
-'namespace=vba-files\Utilities\ProgressBar
-'@Folder("vba-files\Utilities\ProgressBar")
+'namespace=vba-files\ProgressBar
+'@Folder("vba-files\ProgressBar")
 Option Explicit
 
 Private DisplayStatusBarState As Boolean
