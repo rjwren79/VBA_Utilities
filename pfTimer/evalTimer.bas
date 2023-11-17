@@ -1,5 +1,4 @@
 Attribute VB_Name = "evalTimer"
-' Add namespace for XVBA file structure
 'namespace=vba-files\pfTimer
 '@Folder("vba-files\pfTimer")
 Option Explicit
@@ -25,13 +24,13 @@ Private nTest As initTest
 Private Sub Initialize() ' Prepare evalTimer
     
     Debug.Print "Starting Test"
-    pfOpti.Enable
+    pfOpti.pfEnable
     Set modTest = New pfTest
     
     With modTest
         .Title = "Test01"
-    '     .ProcessInit = "pfOpti.Enable"
-    '     .ProcessTerm = "pfOpti.Disable"
+    '     .ProcessInit = "pfOpti.pfEnable"
+    '     .ProcessTerm = "pfOpti.pfDisable"
         .Count = 2
     End With
 
@@ -47,7 +46,7 @@ Private Sub Terminate() ' Quit evalTimer
     IsInitialized = Empty
 
 ExitSub:
-    pfOpti.Disable
+    pfOpti.pfDisable
     Debug.Print "Test Complete"
     Exit Sub
 
@@ -200,3 +199,4 @@ Sub Test()
     Terminate 'Call Terminate
     
 End Sub
+

@@ -9,25 +9,36 @@ Private sPageBrakes As Boolean, sEnableAnimations As Boolean
 Private sStatusBar As Boolean, sPrintCommunication As Boolean
 Private swStatus As Boolean
 
-Public Sub Enable() ' Turn off everything but the essentials
+Sub pfEnable(Optional Echo As Boolean) ' Turn off everything but the essentials
 
     SwitchOff (True)
-    Debug.Print oStat
+    If Echo Then Debug.Print oStat
     
 End Sub
 
-Public Sub Disable() ' Recover previous state
+Sub pfDisable(Optional Echo As Boolean) ' Recover previous state
 
     SwitchOff (False)
-    Debug.Print oStat
+    If Echo Then Debug.Print oStat
 
 End Sub
 
-Public Sub Reset() ' Reset to default state
+Sub pfReset() ' Reset to default state
 
     ResetSwitch
-    PrintToScreen oStatus
-    'PrintToScreen Optimization.oStatus
+
+End Sub
+
+Sub pfState(Optional Report As Boolean) ' Reset to default state
+
+    If Report Then GoTo pfReport
+    Debug.Print oStat
+    Exit Sub
+    
+pfReport:
+    xlReport.mPrint oStatus
+    Exit Sub
+    
 End Sub
 
 Private Sub oState() ' Store current optimization state

@@ -1,6 +1,6 @@
 Attribute VB_Name = "xlReport"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\vba-files\xlReport
+'namespace=vba-files\xlReport
 '@Folder("vba-files\xlReport")
 Option Explicit
 Option Private Module
@@ -13,8 +13,8 @@ Public Const MESSAGE_END As String = "================================== END REP
 
 Public Sub mPrint(message As String)
 
-    Debug.Print Report(message)
-
+        Debug.Print Report(message)
+    
 End Sub
 
 Public Sub mBox(message As String)

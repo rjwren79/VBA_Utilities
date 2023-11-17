@@ -19,12 +19,12 @@ Sub TestModule(tMacro As String)
         Debug.Print "Starting Test"
         Debug.Print "Running " & cmd
         
-    Action:
+Action:
         tReturn = Application.Run(cmd)
         Report = "None"
         GoTo ExitSub
     
-    ExitSub:
+ExitSub:
         Debug.Print "=========================="
         Debug.Print "       Test Report        "
         Debug.Print "Run Result: " & tReturn
@@ -34,7 +34,7 @@ Sub TestModule(tMacro As String)
         Debug.Print "Test Complete."
         Exit Sub
     
-    ErrCtrl:
+ErrCtrl:
         errNum = Err.Number
         errDes = Err.Description
         Err.Clear
@@ -43,3 +43,4 @@ Sub TestModule(tMacro As String)
         GoTo ExitSub
         
     End Sub
+

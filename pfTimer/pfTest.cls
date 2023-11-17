@@ -97,11 +97,12 @@ End Property
 'Private Methods
 '==============================
 ' Private Function Calc(Arr As Variant) As Calculate ' Calculate results
-'    
+'
 '         With WorksheetFunction
 '             Calc.Max = .Max(Arr)
 '             Calc.Min = .Min(Arr)
 '             Calc.Avg = .Average(Arr)
 '         End With
-'   
+'
 '  End Function
+
