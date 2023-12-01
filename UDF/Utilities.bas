@@ -61,6 +61,17 @@ Function IsNullOrEmpty(s As String) As Boolean
 
 End Function
 
+Function ISZERRO(s As Long) As Boolean
+
+    Dim fnDescription As String
+    fnDescription = "Check if value is 0."
+    
+    ISZERRO = False
+
+    If s = 0 Then ISZERRO = True
+
+End Function
+
 Function DoesSheetExist(SheetName As String) As Boolean
 
     Dim fnDescription As String
