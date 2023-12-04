@@ -8,8 +8,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 ' Add namespace for XVBA file structure
-'namespace=vba-files\pfTimer
-'@Folder("vba-files\pfTimer")
+'namespace=VBA_Utilities\pfTimer
+'@Folder("VBA_Utilities\pfTimer")
 Option Explicit
  
 Private Type LARGE_INTEGER

@@ -1,7 +1,7 @@
 Attribute VB_Name = "Utilities"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\UDF
-'@Folder("vba-files\UDF")
+'namespace=VBA_Utilities\UDF
+'@Folder("VBA_Utilities\UDF")
 Option Explicit
 'Option Private Module
 

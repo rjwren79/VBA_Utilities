@@ -1,6 +1,6 @@
 Attribute VB_Name = "evalTimer"
-'namespace=vba-files\pfTimer
-'@Folder("vba-files\pfTimer")
+'namespace=VBA_Utilities\pfTimer
+'@Folder("VBA_Utilities\pfTimer")
 Option Explicit
 Option Private Module
 

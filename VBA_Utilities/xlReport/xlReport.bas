@@ -1,7 +1,7 @@
 Attribute VB_Name = "xlReport"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\xlReport
-'@Folder("vba-files\xlReport")
+'namespace=VBA_Utilities\xlReport
+'@Folder("VBA_Utilities\xlReport")
 Option Explicit
 Option Private Module
 Public msgDocument As String

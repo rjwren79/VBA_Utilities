@@ -1,7 +1,7 @@
 Attribute VB_Name = "NamedRanges"
 Option Explicit
 'Option Private Module
-'namespace=vba-files\module
+'namespace=VBA_Utilities\module
 
 Private s_name As String
 Private s_address As String

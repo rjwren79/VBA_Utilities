@@ -1,6 +1,6 @@
 Attribute VB_Name = "pfOpti"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\pfOptimize
+'namespace=VBA_Utilities\pfOptimize
 Option Explicit
 Option Private Module
 Private sCalcMode As XlCalculation

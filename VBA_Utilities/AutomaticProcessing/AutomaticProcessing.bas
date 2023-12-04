@@ -1,7 +1,7 @@
 Attribute VB_Name = "AutomaticProcessing"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\AutomaticProcessing
-'@Folder("vba-files\AutomaticProcessing")
+'namespace=VBA_Utilities\AutomaticProcessing
+'@Folder("VBA_Utilities\AutomaticProcessing")
 Option Explicit
 
 Private Const Module_Name As String = "AutomaticProcessing."

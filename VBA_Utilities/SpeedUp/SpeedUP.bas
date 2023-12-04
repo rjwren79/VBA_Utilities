@@ -1,6 +1,6 @@
 Attribute VB_Name = "SpeedUP"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\SpeedUP
+'namespace=VBA_Utilities\SpeedUP
 Option Explicit
 Option Private Module
 
