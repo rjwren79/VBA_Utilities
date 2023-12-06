@@ -1,7 +1,7 @@
 Attribute VB_Name = "NamedRanges"
 Option Explicit
 'Option Private Module
-'namespace=VBA_Utilities\module
+'namespace=vba-files\VBA_Utilities\NameRange
 
 Private s_name As String
 Private s_address As String
@@ -21,28 +21,28 @@ Public Sub RangeName_New()
     text = text & Chr(149) & " Name cannot be a cell reference." & vbCrLf
     
     Dim rngName As String
-    rngName = InputBox(text, "RangeName", "RangeName")    
+    rngName = InputBox(text, "RangeName", "RangeName")
     'Did user cancel
-    If vbCancel =  True then Exit Sub
+    If vbCancel = True Then Exit Sub
     'Need to add a test for valid NameRange
 
 
 
     'Set group name
-    Call NameRange_Add(rngName, rng) 
+    Call NameRange_Add(rngName, rng)
     
     'Set name for each cell
     Dim answer As Integer
     answer = MsgBox("Do you want to name each cell in range?", vbQuestion + vbYesNo + vbDefaultButton2, "Group Range")
 
-    If answer = vbYes then Call NameCells(rngName, rng)
+    If answer = vbYes Then Call NameCells(rngName, rng)
     'Set cell name
     Exit Sub
 End Sub
 
 Public Sub RangeName_DeleteAll()
 
-    Call NamedRanges_Delete_All()
+    Call NamedRanges_Delete_All
 
 End Sub
 

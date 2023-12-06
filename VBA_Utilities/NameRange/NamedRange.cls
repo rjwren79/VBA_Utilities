@@ -9,7 +9,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
 
-'namespace=VBA_Utilities\NamedRange
+'namespace=vba-files\VBA_Utilities\NameRange
 
 ' A class to add named ranges in VBA
 ' The class name is NamedRange

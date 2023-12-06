@@ -1,5 +1,5 @@
 Attribute VB_Name = "evalTimer"
-'namespace=VBA_Utilities\pfTimer
+'namespace=vba-files\VBA_Utilities\pfTimer
 '@Folder("VBA_Utilities\pfTimer")
 Option Explicit
 Option Private Module
@@ -24,7 +24,7 @@ Private nTest As initTest
 Private Sub Initialize() ' Prepare evalTimer
     
     Debug.Print "Starting Test"
-    pfOpti.pfEnable
+    pfOptimize.pfEnable
     Set modTest = New pfTest
     
     With modTest
@@ -46,7 +46,7 @@ Private Sub Terminate() ' Quit evalTimer
     IsInitialized = Empty
 
 ExitSub:
-    pfOpti.pfDisable
+    pfOptimize.pfDisable
     Debug.Print "Test Complete"
     Exit Sub
 
