@@ -81,7 +81,7 @@ Dim lRow As Long, i As Long, employee As clsEmployee, entry As String, SplitName
                 .entry = entry
                 a = 0
                 For a = LBound(SuffixArr) To UBound(SuffixArr)
-                    If InStr(1, UCase(SplitName(SplitArrLast)), Trim(SuffixArr(a))) Then
+                    If InStr(1, " " & UCase(entry) & " ", " " & Trim(SuffixArr(a)) & " ") Then
                         SuffixNamePos = SplitArrLast
                         If Not InStr(1, SplitName(SuffixNamePos), ".") > 0 Then
                             SplitName(SuffixNamePos) = Replace(SplitName(SuffixNamePos), "R", "r.")
