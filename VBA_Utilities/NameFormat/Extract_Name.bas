@@ -1,6 +1,7 @@
 Attribute VB_Name = "Extract_Name"
 ' Add namespace for XVBA file structure
 'namespace=vba-files\VBA_Utilities\NameFormat
+'@Folder("VBA_Utilities\NameFormat")
 Option Explicit
 Private sNameSub As Variant, IsInitialized As Boolean, LastRow As Long
 Private ws As Worksheet, waRange As Range, icRange As Range, oaRange As Range, ocRange As Range

@@ -1,8 +1,8 @@
 Attribute VB_Name = "xlShellExe"
 Option Explicit
-
-'namespace=vba-files\xlShellExe
-
+' Add namespace for XVBA file structure
+'namespace=vba-files\VBA_Utilities\xlShellExe
+'@Folder("VBA_Utilities\xlShellExe")
 Public Sub Restart_xl()
     Dim batFile As String
     batFile = "Restart.bat"

@@ -1,7 +1,7 @@
 Attribute VB_Name = "xlFileHandler"
 ' Add namespace for XVBA file structure
-'namespace=vba-files\VBA_Utilities\UpdateModules
-
+'namespace=vba-files\VBA_Utilities\xlFileHandler
+'@Folder("VBA_Utilities\xlFileHandler")
 Option Explicit
 
 Public Sub PrintFileDetails(FilePath As String, TargetFile As String)

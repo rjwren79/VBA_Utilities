@@ -9,7 +9,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 ' Add namespace for XVBA file structure
 'namespace=vba-files\VBA_Utilities\NameFormat
-
+'@Folder("VBA_Utilities\NameFormat")
 Option Explicit
 
 Private pFullName As String

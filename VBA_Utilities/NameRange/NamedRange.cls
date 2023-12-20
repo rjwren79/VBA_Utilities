@@ -7,9 +7,10 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-Option Explicit
-
+'Option Private Module
 'namespace=vba-files\VBA_Utilities\NameRange
+'@Folder("VBA_Utilities\NameRange")
+Option Explicit
 
 ' A class to add named ranges in VBA
 ' The class name is NamedRange

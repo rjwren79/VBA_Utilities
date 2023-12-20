@@ -8,10 +8,10 @@
 ' can be found at https://gist.github.com/3403537
 '
 Attribute VB_Name = "Bootstrap"
-Option Explicit
-
 ' Add namespace for XVBA file structure
 'namespace=vba-files\VBA_Utilities\UpdateModules
+'@Folder("VBA_Utilities\UpdateModules")
+Option Explicit
 '
 ' v2.04 - 3403537
 ' if you are using your own gists - change this

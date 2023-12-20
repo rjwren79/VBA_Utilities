@@ -1,8 +1,8 @@
 Attribute VB_Name = "ReBootXL"
 Option Explicit
-
-'namespace=vba-files\xlReboot
-
+' Add namespace for XVBA file structure
+'namespace=vba-files\VBA_Utilities\xlReboot
+'@Folder("VBA_Utilities\xlReboot")
 Sub ReOpenXL()
     Dim strCMD As String
     strCMD = "CMD /C PING 127.0.0.1 -n 1 -w 5000 >NUL & Excel.exe " & Chr(34) & ThisWorkbook.FullName & Chr(34)
