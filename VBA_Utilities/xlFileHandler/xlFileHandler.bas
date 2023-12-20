@@ -7,7 +7,7 @@ Option Explicit
 Public Sub PrintFileDetails(FilePath As String, TargetFile As String)
     
     Dim sFile As String
-    sFile = FilePath & TargetFile
+    sFile = FilePath & "\" & TargetFile
     '~~> File Path
     Debug.Print "File Location: "; FilePath
     '~~> Target File
