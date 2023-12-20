@@ -1,0 +1,98 @@
+Hello, this is Bing. I can help you with creating a VBA module for Excel. 😊
+
+Based on your request, I have generated the following code snippet that you can use in your workbook. This code will loop through all the subfolders in a given directory, and import all the modules (standard or class) from the Excel files in those subfolders. If a module with the same name already exists in the current workbook, it will be replaced by the imported one.
+
+```vba
+Sub ImportModules ()
+  Dim FileSystem As Object
+  Dim HostFolder As String
+  Dim wb As Workbook
+  Dim myFile As String
+  Dim myExtension As String
+  Dim vbcomp As VBComponent
+  Dim vbcomp2 As VBComponent
+  Dim found As Boolean
+  
+  'Optimize Macro Speed
+  Application.ScreenUpdating = False
+  Application.EnableEvents = False
+  Application.Calculation = xlCalculationManual
+  
+  'Set the folder path where the Excel files are located
+  HostFolder = "C:\MyDocuments\TestResults"
+  
+  'Set the file extension to look for
+  myExtension = "*.xls*"
+  
+  'Create a FileSystemObject to access the folder and subfolders
+  Set FileSystem = CreateObject ("Scripting.FileSystemObject")
+  
+  'Call the recursive function to loop through the subfolders
+  DoFolder FileSystem.GetFolder (HostFolder)
+  
+  'Restore the original settings
+  Application.ScreenUpdating = True
+  Application.EnableEvents = True
+  Application.Calculation = xlCalculationAutomatic
+  
+  'Display a message when the task is completed
+  MsgBox "All modules have been imported!"
+  
+End Sub
+
+Sub DoFolder (Folder)
+  Dim SubFolder
+  Dim File
+  
+  'Loop through each subfolder in the folder
+  For Each SubFolder In Folder.SubFolders
+    DoFolder SubFolder
+  Next
+  
+  'Loop through each file in the folder
+  For Each File In Folder.Files
+    'Check if the file extension matches the target extension
+    If File.Name Like myExtension Then
+      'Open the workbook and set a variable to it
+      Set wb = Workbooks.Open (Filename:=File.Path, UpdateLinks:=0, ReadOnly:=True)
+      'Loop through each module in the workbook
+      For Each vbcomp In wb.VBProject.VBComponents
+        'Check if the module is a standard or class module
+        If ((vbcomp.Type = vbext_ct_StdModule) Or (vbcomp.Type = vbext_ct_ClassModule)) Then
+          'Check if the module already exists in the current workbook
+          found = False
+          For Each vbcomp2 In ThisWorkbook.VBProject.VBComponents
+            If vbcomp2.Name = vbcomp.Name Then
+              'Remove the existing module
+              ThisWorkbook.VBProject.VBComponents.Remove vbcomp2
+              found = True
+              Exit For
+            End If
+          Next vbcomp2
+          'Import the module from the other workbook
+          ThisWorkbook.VBProject.VBComponents.Import vbcomp.Export (ThisWorkbook.Path & "\" & vbcomp.Name & ".bas")
+          'Delete the temporary file
+          Kill ThisWorkbook.Path & "\" & vbcomp.Name & ".bas"
+          'Display a message indicating the module status
+          If found Then
+            Debug.Print "Replaced module " & vbcomp.Name & " from " & File.Name
+          Else
+            Debug.Print "Imported module " & vbcomp.Name & " from " & File.Name
+          End If
+        End If
+      Next vbcomp
+      'Close the workbook without saving
+      wb.Close SaveChanges:=False
+    End If
+  Next File
+End Sub
+```
+
+I hope this code helps you with your task. If you need more information or assistance, please let me know. 😊
+
+Source: Conversation with Bing, 12/20/2023
+(1) vba - Code for looping through all excel files in a specified folder .... https://stackoverflow.com/questions/5851531/code-for-looping-through-all-excel-files-in-a-specified-folder-and-pulling-data.
+(2) Loop Through All Subfolders Using VBA - Stack Overflow. https://stackoverflow.com/questions/22645347/loop-through-all-subfolders-using-VBA.
+(3) excel - VBA - Getting the modules in workbook - Stack Overflow. https://stackoverflow.com/questions/36791473/vba-getting-the-modules-in-workbook.
+(4) Loop Through All Excel Files In A Given Folder - TheSpreadsheetGuru. https://www.thespreadsheetguru.com/loop-all-excel-files-in-folder/.
+(5) How to Loop Through Excel Files in Folder with VBA. https://www.exceldemy.com/loop-through-excel-files-in-folder-vba/.
