@@ -5,7 +5,7 @@ Attribute VB_Name = "Utilities"
 Option Explicit
 'Option Private Module
 
-Enum gUserName
+Enum gUserName 'Enum for GetUserName
     from_System
     from_Application
 End Enum
