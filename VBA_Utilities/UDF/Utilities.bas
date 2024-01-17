@@ -117,3 +117,39 @@ Sub HighlightMisspelledCells()
         End If
     Next cl
 End Sub
+
+Sub PrintArray(Data, SheetName, StartRow, StartCol)
+
+    Dim Row As Integer
+    Dim Col As Integer
+
+    Row = StartRow
+
+    For i = LBound(Data, 1) To UBound(Data, 1)
+        Col = StartCol
+        For j = LBound(Data, 2) To UBound(Data, 2)
+            Sheets(SheetName).Cells(Row, Col).Value = Data(i, j)
+            Col = Col + 1
+        Next j
+            Row = Row + 1
+    Next i
+
+End Sub
+
+Sub PrintArray(Data)
+
+    Dim Row As Integer
+    Dim Col As Integer
+
+    Row = StartRow
+
+    For i = LBound(Data, 1) To UBound(Data, 1)
+        Col = StartCol
+        For j = LBound(Data, 2) To UBound(Data, 2)
+            Debug.print Data(i, j)
+            Col = Col + 1
+        Next j
+            Row = Row + 1
+    Next i
+
+End Sub
